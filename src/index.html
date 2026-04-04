@@ -1,16 +1,125 @@
-cd<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3 - Landing Page</title>
     <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1></h1>
     <!-- ========== NAVBAR ========== -->
+    <!-- NAVBAR -->
+    <nav class="bg-black flex items-center justify-between px-6 py-4 lg:px-16">
+      <!-- Logo -->
+      <span class="text-white text-2xl font-bold">Tech.</span>
+
+      <!-- Hamburger Icon (mobile only) -->
+      <button class="text-white md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Nav Links (tablet and desktop) -->
+      <ul class="hidden md:flex gap-8 text-white text-sm">
+        <li><a href="#" class="hover:text-purple-400">About</a></li>
+        <li><a href="#" class="hover:text-purple-400">Service</a></li>
+        <li><a href="#" class="hover:text-purple-400">Our Work</a></li>
+        <li><a href="#" class="hover:text-purple-400">Team</a></li>
+      </ul>
+
+      <!-- Contact Us Button (tablet and desktop) -->
+      <button class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-full">Contact Us</button>
+    </nav>
 
     <!-- ========== HERO SECTION ========== -->
+    <section class="relative overflow-hidden" style="background: linear-gradient(to bottom, #000000, #210a5e)">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <!-- Left: Text Content -->
+        <div class="flex flex-col gap-4 md:w-1/2 px-6 py-12 md:px-12 lg:px-20 lg:py-20">
+          <h1 class="text-white text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+            Build with the <br />
+            <em class="italic">Future</em>.
+          </h1>
+          <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            From building sleek websites and mobile apps to integrating AI solutions, we help brands turn ideas into powerful digital experiences that connect, engage, and scale.
+          </p>
+          <button class="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-8 py-3 rounded-full w-full md:w-fit">Let's Talk</button>
+        </div>
+
+        <!-- Right: Phone Image FULL EDGE -->
+        <div class="w-full md:w-1/2 self-end">
+          <img src="../assets/images/hand.png" alt="Tech phone mockup" class="w-full h-full object-cover object-top" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHO WE ARE ========== -->
+    <section class="bg-black px-6 py-12 md:px-12 lg:px-20 lg:py-20">
+      <div class="flex flex-col gap-4 text-center">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold">Who We Are</h2>
+
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+          We're a group of tech students trained in
+          <span class="text-white font-semibold">building real-world digital products</span>. From coding to design, we <span class="text-white font-semibold">craft modern solutions for modern problems</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== WHAT WE DO ========== -->
+    <section class="bg-black px-6 py-12 md:px-12 lg:px-20 lg:py-20">
+      <!-- Title -->
+      <div class="text-center mb-10">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-3">What We Do</h2>
+        <p class="text-gray-400 text-sm md:text-base">We offer simple tech solutions to help your ideas grow.</p>
+      </div>
+
+      <!-- Cards Grid: 2 cols mobile, 3 cols tablet/desktop -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Card 1 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/web_dev.png" alt="Web Development" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">Web Development</h3>
+          <p class="text-gray-400 text-xs md:text-sm">Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/app_dev.png" alt="App Development" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">App Development</h3>
+          <p class="text-gray-400 text-xs md:text-sm">Mobile and desktop apps tailored for your needs.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/AI_integration.png" alt="AI Integration" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">AI Integration</h3>
+          <p class="text-gray-400 text-xs md:text-sm">Smart solutions using AI-powered tools and automation.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/UI_UX_design.png" alt="UI/UX Design" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">UI/UX Design</h3>
+          <p class="text-gray-400 text-xs md:text-sm">Clean and functional designs for better user experience.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/landing_page.png" alt="Landing Page Design" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">Landing Page Design</h3>
+          <p class="text-gray-400 text-xs md:text-sm">High-converting landing pages for your product or business.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[#050505] border border-gray-800 rounded-xl p-6 flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/CMS_integration.png" alt="CMS Integration" class="w-10 h-10" />
+          <h3 class="text-white font-semibold text-sm md:text-base">CMS Integration</h3>
+          <p class="text-gray-400 text-xs md:text-sm">Easy-to-manage websites with WordPress or Webflow.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- ========== FOOTER ========== -->
   </body>
