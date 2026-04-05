@@ -9,29 +9,55 @@
   </head>
   <body>
     <!-- ========== NAVBAR ========== -->
-    <!-- NAVBAR -->
-    <nav class="bg-black flex items-center justify-between px-6 py-4 lg:px-16">
-      <!-- Logo -->
-      <span class="text-white text-2xl font-bold">Tech.</span>
+    <nav class="bg-black px-6 py-4 lg:px-16">
+      <!-- Top Row -->
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <span class="text-white text-2xl font-bold">Tech.</span>
 
-      <!-- Hamburger Icon (mobile only) -->
-      <button class="text-white md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+        <!-- Hamburger Icon (mobile only) -->
+        <button onclick="document.getElementById('mobile-menu').classList.remove('hidden')" class="text-white md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
 
-      <!-- Nav Links (tablet and desktop) -->
-      <ul class="hidden md:flex gap-8 text-white text-sm">
-        <li><a href="#" class="hover:text-purple-400">About</a></li>
-        <li><a href="#" class="hover:text-purple-400">Service</a></li>
-        <li><a href="#" class="hover:text-purple-400">Our Work</a></li>
-        <li><a href="#" class="hover:text-purple-400">Team</a></li>
+        <!-- Nav Links (tablet and desktop) -->
+        <ul class="hidden md:flex gap-8 text-white text-sm">
+          <li><a href="#" class="hover:text-purple-400">About</a></li>
+          <li><a href="#" class="hover:text-purple-400">Service</a></li>
+          <li><a href="#" class="hover:text-purple-400">Our Work</a></li>
+          <li><a href="#" class="hover:text-purple-400">Team</a></li>
+        </ul>
+
+        <!-- Contact Us Button (tablet and desktop) -->
+        <button class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-full">Contact Us</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay (fixed, covers full screen) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black z-50 px-6 py-4 md:hidden">
+      <!-- Logo + Close -->
+      <div class="flex items-center justify-between py-4 border-b border-gray-800">
+        <span class="text-white text-2xl font-bold">Tech.</span>
+        <button onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav Links -->
+      <ul class="flex flex-col gap-3 pt-5 pb-4 text-white text-sm">
+        <li><a href="#" class="hover:text-purple-400 block py-1">About</a></li>
+        <li><a href="#" class="hover:text-purple-400 block py-1">Service</a></li>
+        <li><a href="#" class="hover:text-purple-400 block py-1">Our Work</a></li>
+        <li><a href="#" class="hover:text-purple-400 block py-1">Team</a></li>
       </ul>
 
-      <!-- Contact Us Button (tablet and desktop) -->
-      <button class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-full">Contact Us</button>
-    </nav>
+      <!-- Contact Us Button -->
+      <button class="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-3 rounded-full w-full">Contact Us</button>
+    </div>
 
     <!-- ========== HERO SECTION ========== -->
     <section class="relative overflow-hidden" style="background: linear-gradient(to bottom, #000000, #210a5e)">
@@ -121,6 +147,129 @@
       </div>
     </section>
 
+    <!-- ========== OUR WORK ========== -->
+    <section class="bg-black px-6 py-12 md:px-12 lg:px-20 lg:py-20">
+      <!-- <div class="border border-dashed border-blue-500 rounded-xl p-6 md:p-10 bg-black"> -->
+
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Our Work</h2>
+        <p class="text-gray-400 text-sm md:text-base">See what we've built with passion and purpose</p>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Portfolio 1 -->
+        <div class="flex flex-col gap-3">
+          <div class="rounded-xl overflow-hidden">
+            <img src="../assets/icons/portofolio1.png" alt="Portfolio 1" class="w-full h-auto object-cover" />
+          </div>
+          <p class="text-white text-sm font-medium">Portofolio 1</p>
+        </div>
+
+        <!-- Portfolio 2 -->
+        <div class="flex flex-col gap-3">
+          <div class="rounded-xl overflow-hidden">
+            <img src="../assets/icons/portofolio2.png" alt="Portfolio 2" class="w-full h-auto object-cover" />
+          </div>
+          <p class="text-white text-sm font-medium">Portofolio 2</p>
+        </div>
+
+        <!-- Portfolio 3 -->
+        <div class="flex flex-col gap-3">
+          <div class="rounded-xl overflow-hidden">
+            <img src="../assets/icons/portofolio3.png" alt="Portfolio 3" class="w-full h-auto object-cover" />
+          </div>
+          <p class="text-white text-sm font-medium">Portofolio 3</p>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+
+    <!-- ========== MEET THE TEAM ========== -->
+    <section class="bg-black px-5 py-10 md:px-16 lg:px-36 lg:py-20">
+      <!-- Title -->
+      <div class="text-center mb-8 md:mb-10">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Meet the Team</h2>
+        <p class="text-gray-400 text-sm md:text-base">A group of future-ready tech makers.</p>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-16">
+        <!-- Member 1 -->
+        <div class="flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/jasper_kim.png" alt="Jasper Kim" class="w-36 h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm md:text-base">Jasper Kim</p>
+            <p class="text-gray-400 text-xs md:text-sm">Project Manager</p>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/alex_jonathan.png" alt="Alex Jonathan" class="w-36 h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm md:text-base">Alex Jonathan</p>
+            <p class="text-gray-400 text-xs md:text-sm">Full-stack Developer</p>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/mario_lopez.png" alt="Mario Lopez" class="w-36 h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm md:text-base">Mario Lopez</p>
+            <p class="text-gray-400 text-xs md:text-sm">UI/UX Designer</p>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="flex flex-col items-center text-center gap-3">
+          <img src="../assets/icons/j_kim.png" alt="Jasper Kim" class="w-36 h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm md:text-base">Jasper Kim</p>
+            <p class="text-gray-400 text-xs md:text-sm">Data Scientist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LET'S COLLABORATE ========== -->
+    <section class="bg-black px-5 py-10 md:px-16 lg:px-36 lg:pt-20 lg:pb-28">
+      <!-- Title -->
+      <div class="text-center mb-6 lg:mb-16">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Let's Collaborate</h2>
+        <p class="text-gray-400 text-sm md:text-base">Need a tech team? We're ready to help</p>
+      </div>
+
+      <!-- Form -->
+      <div class="flex flex-col gap-6 lg:gap-16 max-w-lg mx-auto lg:max-w-xl">
+        <!-- Name -->
+        <div class="flex flex-col gap-2">
+          <label class="text-white text-sm font-medium">Name</label>
+          <input type="text" placeholder="Enter your name" class="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-purple-600 w-full" />
+        </div>
+
+        <!-- Email -->
+        <div class="flex flex-col gap-2">
+          <label class="text-white text-sm font-medium">Email</label>
+          <input type="email" placeholder="Enter your email" class="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-purple-600 w-full" />
+        </div>
+
+        <!-- Message -->
+        <div class="flex flex-col gap-2">
+          <label class="text-white text-sm font-medium">Message</label>
+          <textarea placeholder="Enter your message" rows="5" class="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-purple-600 w-full resize-none"></textarea>
+        </div>
+
+        <!-- Send Button -->
+        <button class="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-3 rounded-full w-full">Send</button>
+      </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
+    <footer class="bg-black border-t border-[#181D27] px-2 py-6 text-center">
+      <p class="text-gray-400 text-xs md:text-sm">© 2025 Web Programming Hack. All rights reserved.</p>
+    </footer>
   </body>
 </html>
